@@ -3,14 +3,14 @@ import { motion } from 'framer-motion'
 
 const Gallery = ({ selectedImage, setSelectedImage }) => {
   const images = [
-    { id: 1, src: "/gallery/Interior1.jpg", alt: "Interior painting project" },
-    { id: 2, src: "/gallery/Exteriorhouse.jpg", alt: "Exterior painting" },
-    { id: 3, src: "gallery/InteriorWall2.jpg", alt: "Stair-case transformation" },
-    { id: 4, src: "/gallery/InterirorWall3.jpg", alt: "Entertainment room transformation" },
-    { id: 5, src: "gallery/FeatureWall1.jpg", alt: "Hallway transformation" },
-    { id: 6, src: "gallery/exteriorPainting.jpg", alt: "Weatherproof coating" },
-    { id: 7, src: "gallery/KitchenJob.jpg", alt: "Kitchen renovation" },
-    { id: 8, src: "gallery/officeExterior.png", alt: "Office building exterior" }
+    { id: 1, src: "/Interior1.jpg", alt: "Interior painting project" },
+    { id: 2, src: "/Exteriorhouse.jpg", alt: "Exterior painting" },
+    { id: 3, src: "/InteriorWall2.jpg", alt: "Stair-case transformation" },
+    { id: 4, src: "/InterirorWall3.jpg", alt: "Entertainment room transformation" },
+    { id: 5, src: "/FeatureWall1.jpg", alt: "Hallway transformation" },
+    { id: 6, src: "/exteriorPainting.jpg", alt: "Weatherproof coating" },
+    { id: 7, src: "/KitchenJob.jpg", alt: "Kitchen renovation" },
+    { id: 8, src: "/officeExterior.png", alt: "Office building exterior" }
   ]
 
   return (

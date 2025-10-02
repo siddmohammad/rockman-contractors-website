@@ -3,13 +3,13 @@ import { motion } from 'framer-motion'
 
 const Testimonials = () => {
   const testimonials = [
-{
-  name: "Louise Johnston",
-  suburb: "Forster",
-  rating: 5,
-  text: "Highly recommend Rockman Contractors. If you need painting done, Sam and his team are hard-working and do quality work. We have had internal, external and commercial painting done and will hire them again for future painting projects.",
-  image: "https://images.unsplash.com/photo-1502685104226-ee32379fefbe?w=100&h=100&fit=crop&crop=face"
-},
+    {
+      name: "Louise Johnston",
+      suburb: "Forster",
+      rating: 5,
+      text: "Highly recommend Rockman Contractors. If you need painting done, Sam and his team are hard-working and do quality work. We have had internal, external and commercial painting done and will hire them again for future painting projects.",
+      image: "https://images.unsplash.com/photo-1502685104226-ee32379fefbe?w=100&h=100&fit=crop&crop=face"
+    },
     {
       name: "Mike Ginter",
       suburb: "Gosford",
@@ -38,7 +38,7 @@ const Testimonials = () => {
   ]
 
   return (
-    <section id="testimonials" className="py-20 bg-white overflow-hidden">
+    <section id="testimonials" className="py-20 bg-black overflow-hidden">
       {/* Marquee */}
       <div className="mb-16">
         <div className="flex items-center space-x-8 marquee">
@@ -52,10 +52,10 @@ const Testimonials = () => {
       
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             What Our <span className="text-yellow-400">Clients Say</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-300 max-w-2xl mx-auto">
             Real feedback from satisfied customers across the Central Coast
           </p>
         </div>
@@ -64,7 +64,7 @@ const Testimonials = () => {
           {testimonials.map((testimonial, index) => (
             <motion.div
               key={index}
-              className="bg-white rounded-2xl p-8 border border-gray-200 shadow-lg"
+              className="bg-black rounded-2xl p-8 border border-yellow-500 shadow-lg"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.2 }}
@@ -74,11 +74,11 @@ const Testimonials = () => {
                 <img
                   src={testimonial.image}
                   alt={testimonial.name}
-                  className="w-12 h-12 rounded-full mr-4"
+                  className="w-12 h-12 rounded-full mr-4 border-2 border-yellow-400"
                 />
                 <div>
-                  <h4 className="font-semibold text-black">{testimonial.name}</h4>
-                  <p className="text-gray-500 text-sm">{testimonial.suburb}</p>
+                  <h4 className="font-semibold text-white">{testimonial.name}</h4>
+                  <p className="text-gray-400 text-sm">{testimonial.suburb}</p>
                 </div>
               </div>
               
@@ -90,7 +90,7 @@ const Testimonials = () => {
                 ))}
               </div>
               
-              <p className="text-gray-600 italic">
+              <p className="text-gray-300 italic">
                 "{testimonial.text}"
               </p>
             </motion.div>

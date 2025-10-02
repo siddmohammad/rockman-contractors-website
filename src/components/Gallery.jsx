@@ -14,13 +14,13 @@ const Gallery = ({ selectedImage, setSelectedImage }) => {
   ]
 
   return (
-    <section id="gallery" className="py-20 bg-black text-white">
+    <section id="gallery" className="py-20 bg-white text-black">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Our <span className="text-yellow-400">Work</span>
           </h2>
-          <p className="text-xl text-white max-w-2xl mx-auto">
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             See the quality and attention to detail in every project
           </p>
         </div>
@@ -29,7 +29,7 @@ const Gallery = ({ selectedImage, setSelectedImage }) => {
           {images.map((image, index) => (
             <motion.div
               key={image.id}
-              className="group cursor-pointer overflow-hidden rounded-lg border border-yellow-500 bg-black"
+              className="group cursor-pointer overflow-hidden rounded-lg border border-yellow-500 bg-white"
               initial={{ opacity: 0, scale: 0.8 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ delay: index * 0.1 }}
@@ -44,8 +44,8 @@ const Gallery = ({ selectedImage, setSelectedImage }) => {
                   className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
                   loading="lazy"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
-                  <p className="text-white p-4 font-medium">{image.alt}</p>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                  <p className="text-yellow-400 p-4 font-medium">{image.alt}</p>
                 </div>
               </div>
             </motion.div>

@@ -18,7 +18,7 @@ const Hero = ({ scrollToSection }) => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          Central Coast<br />
+          Coastal NSW<br />
           <span className="text-yellow-400">Painting & Decorating</span>
         </motion.h1>
 
@@ -28,7 +28,7 @@ const Hero = ({ scrollToSection }) => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          Transform your space with professional finishes and a local touch.
+          Transform your space with professional finishes, trusted locally for homes and businesses.
         </motion.p>
 
         <motion.div 
@@ -38,7 +38,7 @@ const Hero = ({ scrollToSection }) => {
           transition={{ duration: 0.8, delay: 0.6 }}
         >
           <motion.a
-            href="https://wa.me/61XXXXXXXXX?text=Hi%20Rockman%20Contractors,%20I%27d%20like%20a%20quote%20please"
+            href="https://wa.me/610493153433?text=Hi%20Rockman%20Contractors,%20I%27d%20like%20a%20quote%20please"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-yellow-400 text-black px-8 py-4 rounded-full font-semibold text-lg hover:bg-yellow-300 transition-colors shadow-lg"

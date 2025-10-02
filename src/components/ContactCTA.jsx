@@ -6,12 +6,27 @@ const ContactCTA = ({ formData, setFormData }) => {
     setFormData({ ...formData, [e.target.name]: e.target.value })
   }
 
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    // In a real app, this would send the form data
-    alert('Thank you for your message! We\'ll get back to you within 24 hours.')
-    setFormData({ name: '', phone: '', suburb: '', message: '' })
+  const handleSubmit = async (e) => {
+  e.preventDefault()
+
+  try {
+    const response = await fetch("https://n8n.getabba.info/webhook-test/rockman-form", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(formData),
+    })
+
+    if (response.ok) {
+      alert("Thanks! We’ve received your request. Someone will get back to you shortly.")
+      setFormData({ name: '', phone: '', suburb: '', message: '' })
+    } else {
+      alert("Oops, something went wrong. Please try again.")
+    }
+  } catch (error) {
+    console.error(error)
+    alert("Network error — please try again later.")
   }
+}
 
   return (
     <section id="contact" className="py-20 bg-white text-black">
@@ -38,7 +53,7 @@ const ContactCTA = ({ formData, setFormData }) => {
               
               <div className="space-y-4">
                 <motion.a
-                  href="https://wa.me/61XXXXXXXXX?text=Hi%20Rockman%20Contractors,%20I%27d%20like%20a%20quote%20please"
+                  href="https://wa.me/610493153433?text=Hi%20Rockman%20Contractors,%20I%27d%20like%20a%20quote%20please"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center text-gray-600 hover:text-yellow-400 transition-colors"
@@ -51,7 +66,7 @@ const ContactCTA = ({ formData, setFormData }) => {
                 </motion.a>
                 
                 <motion.a
-                  href="tel:+61XXXXXXXXX"
+                  href="tel:+610493153433"
                   className="flex items-center text-gray-600 hover:text-yellow-400 transition-colors"
                   whileHover={{ x: 5 }}
                 >
@@ -74,8 +89,7 @@ const ContactCTA = ({ formData, setFormData }) => {
               <h4 className="text-xl font-semibold mb-4">Business Details</h4>
               <div className="text-gray-600 space-y-2">
                 <p>ABN: 37 657 315 396</p>
-                <p>Based on the Central Coast, NSW</p>
-                <p>Locally owned & operated</p>
+                <p>Serving Central Coast, Newcastle & Port Macquarie</p>
               </div>
             </div>
           </motion.div>

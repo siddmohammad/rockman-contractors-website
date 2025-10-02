@@ -45,7 +45,7 @@ const ValueProps = () => {
       value: 10,
       suffix: '+',
       label: "Years Experience", 
-      description: "Serving the Central Coast with expertise"
+      description: "Serving customers with expertise"
     },
     {
       value: 95,
@@ -132,8 +132,8 @@ const ValueProps = () => {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
         </svg>
       ),
-      title: "Local Central Coast",
-      description: "Proudly serving our local community for over 10 years"
+      title: "Local Coastal NSW",
+      description: "Trusted painters for Central Coast, Newcastle & Port Macquarie — with local experience."
     }
   ]
 

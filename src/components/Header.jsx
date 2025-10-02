@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 
 const Header = ({ isMenuOpen, setIsMenuOpen, scrollToSection }) => {
@@ -13,7 +13,7 @@ const Header = ({ isMenuOpen, setIsMenuOpen, scrollToSection }) => {
 
   return (
     <motion.header 
-      className="fixed top-0 left-0 right-0 z-50 bg-white shadow-md"
+      className="fixed top-0 left-0 right-0 z-50 bg-white dark:bg-black shadow-md"
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
@@ -28,9 +28,14 @@ const Header = ({ isMenuOpen, setIsMenuOpen, scrollToSection }) => {
             whileHover={{ scale: 1.05 }}
           >
             <img 
-              src="/logo.png" 
+              src="/logo-light.png" 
               alt="Rockman Contractors Logo" 
-              className="h-24 w-auto"
+              className="block dark:hidden w-24"
+            />
+            <img 
+              src="/logo-dark.png" 
+              alt="Rockman Contractors" 
+              className="hidden dark:block w-24"
             />
           </motion.div>
           
@@ -40,7 +45,7 @@ const Header = ({ isMenuOpen, setIsMenuOpen, scrollToSection }) => {
               <motion.button
                 key={link.id}
                 onClick={() => scrollToSection(link.id)}
-                className="text-black hover:text-yellow-500 font-medium transition-colors"
+                className="text-black dark:text-white hover:text-yellow-500 dark:hover:text-yellow-300 font-medium transition-colors"
                 whileHover={{ y: -2 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -67,9 +72,9 @@ const Header = ({ isMenuOpen, setIsMenuOpen, scrollToSection }) => {
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             <div className="w-6 h-6 flex flex-col justify-center items-center">
-              <span className={`block w-5 h-0.5 bg-black transition-transform ${isMenuOpen ? 'rotate-45 translate-y-1' : ''}`} />
-              <span className={`block w-5 h-0.5 bg-black mt-1 transition-opacity ${isMenuOpen ? 'opacity-0' : ''}`} />
-              <span className={`block w-5 h-0.5 bg-black mt-1 transition-transform ${isMenuOpen ? '-rotate-45 -translate-y-1' : ''}`} />
+              <span className={`block w-5 h-0.5 bg-black dark:bg-white transition-transform ${isMenuOpen ? 'rotate-45 translate-y-1' : ''}`} />
+              <span className={`block w-5 h-0.5 bg-black dark:bg-white mt-1 transition-opacity ${isMenuOpen ? 'opacity-0' : ''}`} />
+              <span className={`block w-5 h-0.5 bg-black dark:bg-white mt-1 transition-transform ${isMenuOpen ? '-rotate-45 -translate-y-1' : ''}`} />
             </div>
           </button>
         </div>
@@ -78,7 +83,7 @@ const Header = ({ isMenuOpen, setIsMenuOpen, scrollToSection }) => {
         <AnimatePresence>
           {isMenuOpen && (
             <motion.nav
-              className="md:hidden mt-4 pb-4 border-t border-gray-200"
+              className="md:hidden mt-4 pb-4 border-t border-gray-200 dark:border-gray-700"
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
@@ -88,7 +93,7 @@ const Header = ({ isMenuOpen, setIsMenuOpen, scrollToSection }) => {
                 <motion.button
                   key={link.id}
                   onClick={() => scrollToSection(link.id)}
-                  className="block w-full text-left py-3 text-black hover:text-yellow-500 font-medium"
+                  className="block w-full text-left py-3 text-black dark:text-white hover:text-yellow-500 dark:hover:text-yellow-300 font-medium transition-colors"
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: index * 0.1 }}
@@ -97,19 +102,12 @@ const Header = ({ isMenuOpen, setIsMenuOpen, scrollToSection }) => {
                 </motion.button>
               ))}
 
-              {/* Phone number in mobile menu */}
-              <a 
-                href="tel:0493153433" 
-                className="block w-full text-left py-3 text-black hover:text-yellow-500 font-medium"
-              >
-                0493 153 433
-              </a>
-
+              {/* CTA in Mobile */}
               <motion.a
                 href="https://wa.me/610493153433?text=Hi%20Rockman%20Contractors,%20I'd%20like%20a%20quote%20please"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block w-full text-center mt-4 bg-yellow-400 text-black px-6 py-3 rounded-full font-medium"
+                className="block w-full text-center mt-4 bg-yellow-400 text-black px-6 py-3 rounded-full font-medium hover:bg-yellow-300 transition-colors"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 }}

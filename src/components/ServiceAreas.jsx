@@ -3,14 +3,18 @@ import { motion } from 'framer-motion'
 
 const ServiceAreas = () => {
   const suburbs = [
-    "Gosford", "Terrigal", "Erina", "Woy Woy", "The Entrance", 
-    "Tuggerah", "Avoca Beach", "Umina Beach", "Bateau Bay", 
-    "Long Jetty", "Shelly Beach", "Norah Head", "Budgewoi",
-    "Lake Haven", "Kanwal", "Wyong", "Hamlyn Terrace",
-    "Warnervale", "Dooralong", "Jilliby", "Tacoma",
-    "Tuggerah", "Mardi", "Chittaway Bay", "Berkeley Vale",
-    "Glenning Valley", "Killarney Vale", "Tumbi Umbi"
-  ]
+  // Central Coast (10)
+  "Gosford", "Terrigal", "Erina", "Woy Woy", "The Entrance",
+  "Avoca Beach", "Umina Beach", "Bateau Bay", "Long Jetty", "Wyong",
+
+  // Newcastle & Hunter (9)
+  "Newcastle", "Merewether", "Bar Beach", "Cooks Hill", "Hamilton",
+  "Charlestown", "Adamstown", "Belmont", "Swansea",
+
+  // Port Macquarie & Mid North Coast (9)
+  "Port Macquarie", "Lake Cathie", "Bonny Hills", "Wauchope",
+  "Flynns Beach", "Lighthouse Beach", "Laurieton", "Kempsey", "King Creek"
+]
 
   return (
     <section id="areas" className="py-20 bg-white relative overflow-hidden">
@@ -28,7 +32,7 @@ const ServiceAreas = () => {
             Service <span className="text-yellow-400">Areas</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Proudly serving the entire Central Coast region
+            Proudly Serving Across Coastal NSW — Central Coast, Newcastle & Port Macquarie.
           </p>
         </div>
         

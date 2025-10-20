@@ -15,29 +15,28 @@ const FeaturedServices = () => {
       inclusions: ["Weather-resistant coatings", "Surface preparation", "Crack and gap sealing", "Long-lasting protection"],
       image: "https://unsplash.com/photos/mTV2ZiyBHlM/download?force=true"
     },
-{
-  title: "Feature Walls & Decorating",
-  description: "Create stunning focal points with custom designs and finishes",
-  inclusions: [
-    "Accent wall painting",
-    "Textured and decorative finishes",
-    "Wallpaper installation",
-    "Custom colour styling"
-  ],
-  image: "https://unsplash.com/photos/hKAoa7ZkFpI/download?ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzU5MjM0NDE0fA&force=true"
-}
-,
-{
-  title: "Commercial & Strata",
-  description: "Reliable painting services for businesses and properties",
-  inclusions: [
-    "Minimal disruption",
-    "Flexible scheduling",
-    "High-durability finishes",
-    "Project management"
-  ],
-  image: "https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80"
-}
+    {
+      title: "Feature Walls & Decorating",
+      description: "Create stunning focal points with custom designs and finishes",
+      inclusions: [
+        "Accent wall painting",
+        "Textured and decorative finishes",
+        "Wallpaper installation",
+        "Custom colour styling"
+      ],
+      image: "https://unsplash.com/photos/hKAoa7ZkFpI/download?ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzU5MjM0NDE0fA&force=true"
+    },
+    {
+      title: "Commercial & Strata",
+      description: "Reliable painting services for businesses and properties",
+      inclusions: [
+        "Minimal disruption",
+        "Flexible scheduling",
+        "High-durability finishes",
+        "Project management"
+      ],
+      image: "https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80"
+    }
   ]
 
   return (
@@ -93,9 +92,7 @@ const FeaturedServices = () => {
                 </ul>
                 
                 <motion.a
-                  href={`https://wa.me/610493153433?text=Hi%20Rockman%20Contractors,%20I%27d%20like%20a%20quote%20for%20${service.title}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href={`sms:+61493153433?&body=Hi%20Rockman%20Contractors,%20I'd%20like%20a%20quote%20for%20${encodeURIComponent(service.title)}`}
                   className="inline-flex items-center bg-yellow-400 text-black px-6 py-3 rounded-full font-semibold hover:bg-yellow-300 transition-colors"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}

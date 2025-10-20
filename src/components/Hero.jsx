@@ -38,9 +38,7 @@ const Hero = ({ scrollToSection }) => {
           transition={{ duration: 0.8, delay: 0.6 }}
         >
           <motion.a
-            href="https://wa.me/610493153433?text=Hi%20Rockman%20Contractors,%20I%27d%20like%20a%20quote%20please"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="sms:+61493153433?&body=Hi%20Rockman%20Contractors,%20I'd%20like%20a%20quote%20please"
             className="bg-yellow-400 text-black px-8 py-4 rounded-full font-semibold text-lg hover:bg-yellow-300 transition-colors shadow-lg"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}

@@ -10,7 +10,7 @@ const ContactCTA = ({ formData, setFormData }) => {
   e.preventDefault()
 
   try {
-    const response = await fetch("https://n8n.getabba.info/webhook-test/rockman-form", {
+    const response = await fetch("https://n8n.getabba.info/webhook/rockman-form", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(formData),
@@ -165,7 +165,7 @@ const ContactCTA = ({ formData, setFormData }) => {
             </motion.button>
             
             <p className="text-sm text-gray-500 text-center">
-              Or get an instant quote via WhatsApp above
+              Or get an instant quote via SMS above
             </p>
           </motion.form>
         </div>

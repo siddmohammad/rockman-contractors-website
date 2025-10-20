@@ -89,14 +89,14 @@ const Header = ({ isMenuOpen, setIsMenuOpen, scrollToSection: parentScroll }) =>
 
             {/* CTA button */}
             <motion.a
-              href="https://wa.me/610493153433?text=Hi%20Rockman%20Contractors,%20I'd%20like%20a%20quote%20please"
+              href="tel:+610493153433"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-yellow-400 text-black px-6 py-2 rounded-full font-medium hover:bg-yellow-300 transition-colors"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              Get Quote
+              Call Us
             </motion.a>
           </nav>
 
@@ -140,9 +140,7 @@ const Header = ({ isMenuOpen, setIsMenuOpen, scrollToSection: parentScroll }) =>
 
               {/* CTA in Mobile */}
               <motion.a
-                href="https://wa.me/610493153433?text=Hi%20Rockman%20Contractors,%20I'd%20like%20a%20quote%20please"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="sms:+61493153433?&body=Hi%20Rockman%20Contractors,%20I'd%20like%20a%20quote%20please"
                 className="block w-full text-center mt-4 bg-yellow-400 text-black px-6 py-3 rounded-full font-medium hover:bg-yellow-300 transition-colors"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}

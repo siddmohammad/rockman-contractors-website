@@ -18,7 +18,7 @@ const Hero = ({ scrollToSection }) => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          Coastal NSW<br />
+          Central Coast & Newcastle NSW<br />
           <span className="text-yellow-400">Painting & Decorating</span>
         </motion.h1>
 

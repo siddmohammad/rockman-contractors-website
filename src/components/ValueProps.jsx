@@ -133,7 +133,7 @@ const ValueProps = () => {
         </svg>
       ),
       title: "Local Coastal NSW",
-      description: "Trusted painters for Central Coast, Newcastle & Port Macquarie — with local experience."
+      description: "Trusted painters for Central Coast & Newcastle — with local experience."
     }
   ]
 

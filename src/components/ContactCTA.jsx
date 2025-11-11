@@ -89,7 +89,7 @@ const ContactCTA = ({ formData, setFormData }) => {
               <h4 className="text-xl font-semibold mb-4">Business Details</h4>
               <div className="text-gray-600 space-y-2">
                 <p>ABN: 37 657 315 396</p>
-                <p>Serving Central Coast, Newcastle & Port Macquarie</p>
+                <p>Serving Central Coast & Newcastle</p>
               </div>
             </div>
           </motion.div>

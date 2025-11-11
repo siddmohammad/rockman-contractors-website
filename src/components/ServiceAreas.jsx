@@ -11,9 +11,6 @@ const ServiceAreas = () => {
   "Newcastle", "Merewether", "Bar Beach", "Cooks Hill", "Hamilton",
   "Charlestown", "Adamstown", "Belmont", "Swansea",
 
-  // Port Macquarie & Mid North Coast (9)
-  "Port Macquarie", "Lake Cathie", "Bonny Hills", "Wauchope",
-  "Flynns Beach", "Lighthouse Beach", "Laurieton", "Kempsey", "King Creek"
 ]
 
   return (
@@ -32,7 +29,7 @@ const ServiceAreas = () => {
             Service <span className="text-yellow-400">Areas</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Proudly Serving Across Coastal NSW — Central Coast, Newcastle & Port Macquarie.
+            Proudly Serving Across Coastal NSW — Central Coast & Newcastle.
           </p>
         </div>
         

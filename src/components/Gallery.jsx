@@ -3,14 +3,14 @@ import { motion } from 'framer-motion'
 
 const Gallery = ({ selectedImage, setSelectedImage }) => {
   const images = [
-    { id: 1, src: "/Interior1.jpg", alt: "Interior painting project" },
-    { id: 2, src: "/Exteriorhouse.jpg", alt: "Exterior painting" },
-    { id: 3, src: "/InteriorWall2.jpg", alt: "Stair-case transformation" },
-    { id: 4, src: "/InterirorWall3.jpg", alt: "Entertainment room transformation" },
-    { id: 5, src: "/FeatureWall1.jpg", alt: "Hallway transformation" },
-    { id: 6, src: "/exteriorPainting.jpg", alt: "Weatherproof coating" },
-    { id: 7, src: "/KitchenJob.jpg", alt: "Kitchen renovation" },
-    { id: 8, src: "/officeExterior.png", alt: "Office building exterior" }
+    { id: 1, src: "/interior-painting-living-room-rockman-contractors.jpg", alt: "Interior painting project" },
+    { id: 2, src: "/rockman-contractors-exterior-house-painting-central-coast.jpg", alt: "Exterior painting" },
+    { id: 3, src: "/interior-wall-finish-central-coast-painting.jpg", alt: "Stair-case transformation" },
+    { id: 4, src: "/interior-decorating-feature-wall-newcastle.jpg", alt: "Entertainment room transformation" },
+    { id: 5, src: "/feature-wall-painting-rockman-contractors-central-coast.jpg", alt: "Hallway transformation" },
+    { id: 6, src: "/rockman-contractors-exterior-painting-newcastle.jpg", alt: "Weatherproof coating" },
+    { id: 7, src: "/kitchen-painting-renovation-rockman-contractors.jpg", alt: "Kitchen renovation" },
+    { id: 8, src: "/commercial-office-exterior-painting-rockman-contractors.png", alt: "Office building exterior" }
   ]
 
   return (
